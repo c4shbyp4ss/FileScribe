@@ -1,0 +1,1 @@
+int wordHarvester (FILE * dir_file);

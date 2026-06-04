@@ -1,0 +1,1 @@
+FILE * fileOpening (char * dir);

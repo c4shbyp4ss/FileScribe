@@ -1,0 +1,1 @@
+FILE * fileReturn (char * directoryPath, char * typeOpen);

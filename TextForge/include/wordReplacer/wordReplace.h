@@ -1,0 +1,1 @@
+char * wordReplace (char * text, char * oldWord, char * newWord);

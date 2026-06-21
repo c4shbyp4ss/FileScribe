@@ -7,7 +7,7 @@ Cada projeto isola um conceito específico, tornando este repositório uma refer
 |---|------|-----------|--------|
 | 01 | [WordPulse](#01-wordpulse) | Contador de palavras, linhas e caracteres | ✅ Concluído |
 | 02 | [TextForge](#02-textforge) | Busca e substituição em arquivos de texto | ✅ Concluído |
-| 03 | [TaskVault](#03-taskvault) | Gerenciador de tarefas em arquivo | 🔜 Planejado |
+| 03 | [TaskVault](#03-taskvault) | Gerenciador de tarefas em arquivo | ✅ Concluído |
 | 04 | [LexiMap](#04-leximap) | Indexador de frequência de palavras | 🔜 Planejado |
 | 05 | [FileSlicer](#05-fileslicer) | Divisor de arquivos por número de linhas | 🔜 Planejado |
 ---
@@ -74,11 +74,47 @@ Lê um arquivo de origem, substitui todas as ocorrências de uma palavra por out
 
 ---
 ## 03. TaskVault
-> 🔜 Planejado
+> ✅ Concluído
 
-Um to-do list minimalista em CLI que persiste tarefas em um arquivo `.txt`. Suporta adicionar, listar e marcar tarefas como concluídas.
+Um gerenciador de tarefas em CLI que persiste a lista em um arquivo `.txt`. Suporta inserir, remover por índice e listar tarefas, com um menu de terminal desenhado com moldura de borda dupla.
 
-**Conceitos a praticar:** modo append (`"a"`), parsing de linhas, reescrita de arquivo.
+**Conceitos praticados:** modularização em múltiplos arquivos `.h`/`.c`, `fopen`/`fprintf`/`fgets` para persistência, parsing de linhas com `sscanf`, arrays multidimensionais de `char`, tratamento de erros (lista cheia, índice inválido, EOF), Makefile genérico.
+
+```
+╔════════════════════════════════════════╗
+║               TASKVAULT                ║
+╠════════════════════════════════════════╣
+║ 1 - Inserir tarefa                     ║
+║ 2 - Remover tarefa                     ║
+║ 3 - Listar tarefas                     ║
+║ 0 - Sair                               ║
+╚════════════════════════════════════════╝
+
+>: 3
+
+╔════════════════════════════════════════╗
+║            LISTA DE TAREFAS            ║
+╚════════════════════════════════════════╝
+
+[1] - Categoria: Trabalho | Tarefa: Fazer relatorio
+[2] - Categoria: Casa | Tarefa: Lavar louca
+
+Pressione ENTER para continuar...
+```
+
+```
+╔════════════════════════════════════════╗
+║             REMOVER TAREFA             ║
+╚════════════════════════════════════════╝
+
+[1] - Categoria: Trabalho | Tarefa: Fazer relatorio
+[2] - Categoria: Casa | Tarefa: Lavar louca
+
+Selecione o índice para remover
+>: 1
+
+Tarefa removida!
+```
 
 ---
 ## 04. LexiMap

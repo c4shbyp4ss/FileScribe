@@ -8,7 +8,7 @@ Cada projeto isola um conceito específico, tornando este repositório uma refer
 | 01 | [WordPulse](#01-wordpulse) | Contador de palavras, linhas e caracteres | ✅ Concluído |
 | 02 | [TextForge](#02-textforge) | Busca e substituição em arquivos de texto | ✅ Concluído |
 | 03 | [TaskVault](#03-taskvault) | Gerenciador de tarefas em arquivo | ✅ Concluído |
-| 04 | [LexiMap](#04-leximap) | Indexador de frequência de palavras | 🔜 Planejado |
+| 04 | [LexiMap](#04-leximap) | Indexador de frequência de palavras | ✅ Concluído |
 | 05 | [FileSlicer](#05-fileslicer) | Divisor de arquivos por número de linhas | 🔜 Planejado |
 ---
 ## 01. WordPulse
@@ -118,11 +118,59 @@ Tarefa removida!
 
 ---
 ## 04. LexiMap
-> 🔜 Planejado
+> ✅ Concluído
 
-Lê um arquivo de texto e gera um segundo arquivo com cada palavra única e quantas vezes ela aparece, ordenado alfabeticamente.
+Lê um arquivo de texto informado pelo usuário e gera um segundo arquivo com cada palavra única e quantas vezes ela aparece, ordenado alfabeticamente. Menu de terminal com moldura de borda dupla, no mesmo padrão do TaskVault.
 
-**Conceitos a praticar:** tokenização com `strtok`, contagem de frequência, `fprintf`, ordenação.
+**Conceitos praticados:** tokenização com `strtok`, contagem de frequência, ordenação alfabética (`strcmp`), `fprintf`/`fgets`, modularização em pastas próprias (`fileLoader`, `wordTokenizer`, `alphabetSorter`, `mapWriter`, `mapDisplay`), entrada de caminho de arquivo via `fgets`.
+
+```
+╔════════════════════════════════════════╗
+║                LEXIMAP                 ║
+╠════════════════════════════════════════╣
+║ 1 - Mapear palavras de um arquivo      ║
+║ 2 - Ver ultimo mapeamento gerado       ║
+║ 0 - Sair                               ║
+╚════════════════════════════════════════╝
+
+>: 1
+
+╔════════════════════════════════════════╗
+║             MAPEAR ARQUIVO             ║
+╚════════════════════════════════════════╝
+
+Caminho do arquivo texto: data/exemplo.txt
+
+16 palavra(s) unica(s) encontrada(s).
+Resultado salvo em: ./data/wordmap.txt
+
+Pressione ENTER para continuar...
+```
+
+```
+╔════════════════════════════════════════╗
+║            ULTIMO MAPEAMENTO           ║
+╚════════════════════════════════════════╝
+
+  1) a - 2
+  2) de - 2
+  3) do - 2
+  4) e - 1
+  5) ficou - 1
+  6) mais - 1
+  7) o - 2
+  8) pouco - 1
+  9) rasgada - 1
+ 10) rato - 2
+ 11) rei - 2
+ 12) roeu - 2
+ 13) roma - 2
+ 14) roupa - 2
+ 15) um - 1
+ 16) voltou - 1
+
+Pressione ENTER para continuar...
+```
 
 ---
 ## 05. FileSlicer

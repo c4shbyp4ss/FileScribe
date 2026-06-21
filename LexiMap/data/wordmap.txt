@@ -1,0 +1,16 @@
+a - 2
+de - 2
+do - 2
+e - 1
+ficou - 1
+mais - 1
+o - 2
+pouco - 1
+rasgada - 1
+rato - 2
+rei - 2
+roeu - 2
+roma - 2
+roupa - 2
+um - 1
+voltou - 1

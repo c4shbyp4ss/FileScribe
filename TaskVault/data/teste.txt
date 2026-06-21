@@ -1,0 +1,4 @@
+====================
+Categoria: carro | Tarefa: arrumar carro
+====================
+Categoria: moto | Tarefa: arrumar moto

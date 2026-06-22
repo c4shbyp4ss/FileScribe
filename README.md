@@ -9,7 +9,7 @@ Cada projeto isola um conceito específico, tornando este repositório uma refer
 | 02 | [TextForge](#02-textforge) | Busca e substituição em arquivos de texto | ✅ Concluído |
 | 03 | [TaskVault](#03-taskvault) | Gerenciador de tarefas em arquivo | ✅ Concluído |
 | 04 | [LexiMap](#04-leximap) | Indexador de frequência de palavras | ✅ Concluído |
-| 05 | [FileSlicer](#05-fileslicer) | Divisor de arquivos por número de linhas | 🔜 Planejado |
+| 05 | [FileSlicer](#05-fileslicer) | Divisor de arquivos por número de linhas | ✅ Concluído |
 ---
 ## 01. WordPulse
 Lê um arquivo `.txt` e imprime o total de **palavras**, **linhas** e **caracteres**.  
@@ -174,11 +174,34 @@ Pressione ENTER para continuar...
 
 ---
 ## 05. FileSlicer
-> 🔜 Planejado
+> ✅ Concluído
 
-Divide um arquivo de texto grande em partes menores com um número fixo de linhas cada, gerando `parte_1.txt`, `parte_2.txt`, e assim por diante.
+Divide um arquivo de texto grande em partes menores com um número fixo de linhas cada, gerando `parte_1.txt`, `parte_2.txt`, e assim por diante. As partes são salvas em `./data/parts/`.
 
-**Conceitos a praticar:** múltiplos ponteiros de arquivo, `sprintf` para nomeação dinâmica, iteração por linhas.
+**Conceitos praticados:** múltiplos ponteiros de arquivo, `sprintf` para nomeação dinâmica, iteração por linhas, modularização em subpastas (`menu`, `slicer`, `operational`), menu com `getchar()` + `cleanBuffer()`.
+
+```
+╔════════════════════════════════════════╗
+║               FILESLICER               ║
+╠════════════════════════════════════════╣
+║ 1 - Dividir arquivo em partes          ║
+║ 0 - Sair                               ║
+╚════════════════════════════════════════╝
+
+>: 1
+
+╔════════════════════════════════════════╗
+║            DIVIDIR ARQUIVO             ║
+╚════════════════════════════════════════╝
+
+Caminho do arquivo de entrada: data/exemplo.txt
+Linhas por parte: 10
+  [INFO] Processando...
+
+  [OK] Arquivo dividido com sucesso! Resultado em: ./data/parts/
+
+Pressione ENTER para continuar...
+```
 
 ---
 ## Compilando
